@@ -7,6 +7,7 @@ namespace Geppig.ResponseBuilders
         {
             string jsonString = "";
 
+            jsonString = "Something's working";
 
             return jsonString;
         }

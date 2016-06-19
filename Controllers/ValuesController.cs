@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Geppig.ResponseBuilders;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace Geppig.Controllers
 {
@@ -19,15 +21,16 @@ namespace Geppig.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(string id)
+        public string Get(string id, [FromBody] string text)
         {
-            return GetResponseBuilder.BuildJsonResponse(id);
+            return text;
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
+        // POST api/values/5
+        [HttpPost("{id}")]
+        public string Post(string id, [FromBody] JToken jsonText)
         {
+            return PostResponseBuilder.BuildJsonResponse(id, jsonText.ToString());
         }
 
         // PUT api/values/5

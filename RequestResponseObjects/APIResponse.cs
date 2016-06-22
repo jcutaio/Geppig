@@ -1,4 +1,4 @@
-namespace Geppig.Models
+namespace Geppig.RequestResponseObjects
 {
     public class APIResponse
     {

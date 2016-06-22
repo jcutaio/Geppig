@@ -1,4 +1,5 @@
 using Geppig.Models;
+using Geppig.RequestResponseObjects;
 
 namespace Geppig.ResponseBuilders
 {

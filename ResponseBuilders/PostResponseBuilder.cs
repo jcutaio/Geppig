@@ -1,5 +1,6 @@
 using Geppig.Models;
 using Newtonsoft.Json;
+using Geppig.RequestResponseObjects;
 
 namespace Geppig.ResponseBuilders
 {
@@ -20,7 +21,7 @@ namespace Geppig.ResponseBuilders
             switch (id)
             {
                 case "GetEvents":
-                    return new GetEventsResponseBuilder();
+                    return new GetEventListResponseBuilder();
 
                 default:
                     return null;

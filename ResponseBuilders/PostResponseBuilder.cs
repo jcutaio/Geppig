@@ -20,8 +20,10 @@ namespace Geppig.ResponseBuilders
         {
             switch (id)
             {
-                case "GetEvents":
+                case "GetEventList":
                     return new GetEventListResponseBuilder();
+                case "GetEventDetails":
+                    return new GetEventDetailsResponseBuilder();
 
                 default:
                     return null;
